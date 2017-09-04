@@ -1,15 +1,12 @@
 
-class Test
-attr_reader :name, :age
-  def initialize(name,age)
-    @name=name
-    @age=age
+def n_times
+  1.upto(10) do |count|
+    yield count
   end
 end
 
-test1=Test.new("Jordan",48)
-test2=Test.new("John",70)
-tests=[test1,test2]
-tests.each do |test|
-  puts " My name is #{test.name}, I'm #{test.age} years old."
+n_times do |n|
+  puts "#{n} situps"
+  puts "#{n} pushups"
+  puts "#{n} chinups"
 end
