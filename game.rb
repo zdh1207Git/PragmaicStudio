@@ -39,6 +39,10 @@ class Game
     wimpy_players.each do |player|
       puts "\n#{player.name}(#{player.health})"
     end
+    @players.each do |player|
+      puts "\n#{player.name}'s point totals:"
+      puts "#{player.points} grand total points"
+    end
   end
 end
 if __FILE__==$0
